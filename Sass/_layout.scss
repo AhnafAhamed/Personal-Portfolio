@@ -1,0 +1,295 @@
+// Nav Bar Section
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &__logo {
+    font-family: var(--font-accent);
+    font-size: 4rem;
+    @media only screen and (max-width: $small) {
+      font-size: 3rem;
+    }
+  }
+  &__li {
+    align-items: center;
+    @media only screen and (max-width: $medium) {
+      display: none;
+    }
+  }
+  &__link {
+    text-decoration: none;
+    color: var(--color-primary);
+    font-size: 1.6rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+    &:not(:last-child) {
+      margin-right: 2.5rem;
+    }
+  }
+  &__mobile {
+    display: block;
+    opacity: 0;
+    width: 31rem;
+    height: 14rem;
+    background: white;
+    position: fixed;
+    top: 10rem;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    text-align: center;
+    box-shadow: 1px 5px 14px 0.5px #5c5c5c30;
+    border-radius: 3px;
+    z-index: 1000;
+    transition: all 300ms ease-in-out;
+    &-clicked {
+      display: flex;
+    }
+    > ul {
+      list-style: none;
+      margin: 0 auto;
+      > li {
+        padding: 5px;
+      }
+      > li a {
+        text-decoration: none;
+        font-size: 1.6rem;
+        letter-spacing: 2px;
+        text-align: center;
+        text-transform: uppercase;
+        color: var(--color-primary);
+      }
+    }
+  }
+  &__iconbox {
+    display: none;
+    position: relative;
+    @media only screen and (max-width: $medium) {
+      display: block;
+    }
+  }
+}
+// Hero Section
+.hero {
+  margin-top: 5%;
+  display: flex;
+  justify-content: space-between;
+  &__intro {
+    margin-top: 5%;
+    &-hello {
+      font-size: 2rem;
+      letter-spacing: 4px;
+      color: var(--color-tertiary);
+      font-weight: 500;
+      @media only screen and (max-width: $large) {
+        font-size: 1.8rem;
+      }
+      @media only screen and (max-width: $medium) {
+        font-size: 1.5rem;
+      }
+    }
+    &-name {
+      font-family: var(--font-accent);
+      font-size: 6.8rem;
+      letter-spacing: 8px;
+      @media only screen and (max-width: $large) {
+        font-size: 6rem;
+      }
+      @media only screen and (max-width: $medium) {
+        font-size: 5rem;
+      }
+      @media only screen and (max-width: $small) {
+        font-size: 4rem;
+      }
+    }
+    &-role {
+      font-size: 2.2rem;
+      margin-top: 1%;
+      font-weight: 500;
+      @media only screen and (max-width: $large) {
+        font-size: 2rem;
+      }
+      @media only screen and (max-width: $medium) {
+        font-size: 1.8rem;
+      }
+    }
+    &-introduction {
+      margin-top: 3%;
+      font-size: 2rem;
+      @media only screen and (max-width: $large) {
+        font-size: 1.6rem;
+      }
+      @media only screen and (max-width: $medium) {
+        font-size: 1.4rem;
+      }
+    }
+    &-btn {
+      margin-top: 5%;
+    }
+  }
+}
+
+// Skills Section
+
+.skills {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  @media only screen and (max-width: $medium) {
+    flex-wrap: wrap;
+  }
+
+  &__box {
+    text-align: center;
+    flex-basis: auto;
+    @media only screen and (max-width: $medium) {
+      flex-basis: 10rem;
+      margin-bottom: 5%;
+    }
+    > img {
+      width: 7rem;
+      @media only screen and (max-width: $large) {
+        width: 5rem;
+        flex-basis: min-content;
+      }
+    }
+  }
+
+  &__text {
+    margin-top: 10%;
+    font-size: 1.6rem;
+    font-weight: 500;
+    text-align: center;
+  }
+}
+
+//Projects Section
+.projects {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  flex-wrap: wrap;
+  &__box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #ebebeb;
+    max-width: 200px;
+    height: 160px;
+    padding: 7%;
+
+    &-text {
+      font-size: 1.6rem;
+      margin-top: 10px;
+    }
+    &-tags {
+      display: flex;
+    }
+    &-tag {
+      font-size: 1.2rem;
+      background: #fff;
+      padding: 3.5px;
+      margin-right: 5px;
+    }
+    &-icons {
+      display: flex;
+      justify-content: flex-end;
+      > a > img {
+        width: 20px;
+      }
+      > a:nth-child(2) {
+        margin-left: 12px;
+      }
+    }
+  }
+  &__title {
+    font-size: 1.8rem;
+    text-align: center;
+    color: #fff;
+    background: var(--color-primary);
+    width: 200px;
+    @media only screen and (max-width: $large) {
+      margin-bottom: 15%;
+    }
+  }
+}
+
+//contact Section
+
+.contact {
+  &__intro {
+    font-size: 2rem;
+    letter-spacing: 2px;
+    @media only screen and (max-width: $medium) {
+      font-size: 1.6rem;
+    }
+    @media only screen and (max-width: $medium) {
+      font-size: 1.4rem;
+    }
+  }
+
+  &__label {
+    font-size: 1.6rem;
+    margin-top: 3%;
+    @media only screen and (max-width: $medium) {
+      font-size: 1.4rem;
+    }
+    > input {
+      border: 2px solid;
+      display: block;
+      width: 415px;
+      height: 32px;
+      margin-top: 10px;
+      padding: 5px;
+      @media only screen and (max-width: $medium) {
+        width: 250px;
+      }
+    }
+    > textarea {
+      border: 2px solid;
+      display: block;
+      margin-top: 10px;
+      resize: vertical;
+      padding: 5px;
+      width: 415px;
+      @media only screen and (max-width: $medium) {
+        width: 250px;
+      }
+    }
+  }
+  &__btn {
+    margin-top: 5%;
+  }
+}
+
+//footer
+
+.footer {
+  margin-top: 10%;
+  &__logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    > a > img {
+      width: 5rem;
+      @media only screen and (max-width: $large) {
+        width: 4rem;
+      }
+      @media only screen and (max-width: $small) {
+        width: 3rem;
+      }
+    }
+    > a > img:nth-child(1) {
+      margin-right: 4rem;
+    }
+    > a > img:nth-child(3) {
+      margin-left: 4rem;
+    }
+  }
+
+  &__credits {
+    margin-top: 3rem;
+    font-size: 1.6rem;
+    text-align: center;
+  }
+}

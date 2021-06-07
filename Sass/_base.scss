@@ -1,0 +1,48 @@
+//Resets - Variables - Mixins - Utility Classes
+
+:root {
+  --color-primary: #000;
+  --color-secondary: #fff;
+  --color-tertiary: #5c5c5c;
+
+  --font-primary: "Poppins", sans-serif;
+  --font-accent: "Bree Serif", serif;
+}
+
+//breakpoints
+
+$largest: 59em; //950px/16
+$large: 49em; //786px/16
+$medium: 43em; //690px/16
+$small: 31em; //490px/16
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; //1rem =10px, 10px/16px = 62.5%
+}
+
+body {
+  font-family: var(--font-primary);
+  margin: 4rem 13rem 2rem 13rem;
+  @media only screen and (max-width: $largest) {
+    margin: 2rem 10rem 2rem 5rem;
+  }
+  @media only screen and (max-width: $medium) {
+    margin: 2rem 4rem 2rem 4rem;
+  }
+}
+
+.section {
+  margin-top: 10%;
+}
