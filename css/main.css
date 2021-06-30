@@ -184,6 +184,7 @@ body {
   font-family: var(--font-accent);
   font-size: 6.8rem;
   letter-spacing: 8px;
+  font-weight: 400;
 }
 
 @media only screen and (max-width: 49em) {
